@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink-900 antialiased;
+  }
+
+  /* Offset in-page anchors so headings are not hidden under the sticky header. */
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+
+  ::selection {
+    @apply bg-gold-500 text-ink-950;
+  }
+
+  /* Clear, consistent keyboard focus everywhere. */
+  :focus-visible {
+    outline: 2px solid theme("colors.gold.500");
+    outline-offset: 3px;
+  }
+
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: none;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Components                                                         */
+/* ------------------------------------------------------------------ */
+@layer components {
+  .eyebrow {
+    @apply flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] sm:tracking-[0.24em];
+  }
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-8 shrink-0 bg-current;
+  }
+
+  /* Thin blueprint grid — used on dark surfaces. */
+  .blueprint-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: -1px -1px;
+  }
+
+  /* Architectural corner bracket. */
+  .corner-mark {
+    @apply absolute h-5 w-5 border-l-2 border-t-2 border-gold-500;
+  }
+
+  .footer-title {
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-white;
+  }
+
+  .footer-link {
+    @apply text-concrete-300 transition-colors duration-300 hover:text-gold-400;
+  }
+
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed left-4 top-4 z-[100] bg-gold-500 px-4 py-3 font-semibold text-ink-950;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Motion — subtle, one-time, and disabled for reduced-motion users   */
+/* ------------------------------------------------------------------ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-in {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Elements are only hidden once JS has confirmed it can reveal them. */
+.js [data-reveal] {
+  opacity: 0;
+}
+.js [data-reveal].is-visible {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-in,
+  .js [data-reveal],
+  .js [data-reveal].is-visible {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
