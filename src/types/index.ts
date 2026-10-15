@@ -65,6 +65,8 @@ export interface Project {
   image: string;
   imageAlt: string;
   status?: "Completed" | "Ongoing";
+  /** Contract value as shown on the card, e.g. "₹330 Lakh". */
+  cost?: string;
 }
 
 export interface Testimonial {

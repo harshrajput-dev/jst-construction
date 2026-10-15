@@ -140,6 +140,14 @@ function ProjectCard({ project }: { project: ResolvedProject }) {
               </p>
             ) : null}
             <p className="mt-3 text-[0.9375rem] leading-relaxed text-ink-500">{project.description}</p>
+            {project.cost ? (
+              <div className="mt-auto pt-5">
+                <p className="flex items-baseline justify-between border-t border-concrete-200 pt-4">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-500">Project cost</span>
+                  <span className="font-display text-lg font-bold text-ink-900">{project.cost}</span>
+                </p>
+              </div>
+            ) : null}
           </>
         )}
       </div>
