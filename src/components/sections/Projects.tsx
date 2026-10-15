@@ -133,10 +133,12 @@ function ProjectCard({ project }: { project: ResolvedProject }) {
         ) : (
           <>
             <h3 className="font-display text-lg font-bold text-ink-900">{project.name}</h3>
-            <p className="mt-1.5 flex items-center gap-1.5 text-sm text-ink-500">
-              <Icon name="pin" className="h-4 w-4 text-gold-600" />
-              {project.location}
-            </p>
+            {project.location ? (
+              <p className="mt-1.5 flex items-center gap-1.5 text-sm text-ink-500">
+                <Icon name="pin" className="h-4 w-4 text-gold-600" />
+                {project.location}
+              </p>
+            ) : null}
             <p className="mt-3 text-[0.9375rem] leading-relaxed text-ink-500">{project.description}</p>
           </>
         )}
