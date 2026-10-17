@@ -40,6 +40,12 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
+        url: imagePaths.hero,
+        width: 1448,
+        height: 815,
+        alt: imageAlt.hero,
+      },
+      {
         url: imagePaths.logo,
         width: logoSize.width,
         height: logoSize.height,
@@ -48,12 +54,18 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [imagePaths.logo],
+    images: [imagePaths.hero],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  category: "construction",
+  ...(siteConfig.googleVerification ? { verification: { google: siteConfig.googleVerification } } : {}),
   formatDetection: { telephone: true, email: true, address: true },
 };
 

@@ -8,7 +8,7 @@ export const heroContent = {
   titleLead: "Building Strong Foundations",
   titleAccent: "for a Better Tomorrow",
   description:
-    "JST Construction Private Limited delivers construction solutions built on quality, trust, safety, modern technology, and timely execution.",
+    "JST Construction Private Limited is a civil contractor and builder from Pilkhuwa, Hapur, delivering government buildings, residences and road works across Uttar Pradesh — built on quality, safety and timely execution.",
   primaryCta: { label: "Explore Our Services", href: "#services" },
   secondaryCta: { label: "Contact Us", href: "#contact" },
   trustLine: ["Quality", "Trust", "Commitment"],
@@ -18,7 +18,7 @@ export const aboutContent = {
   eyebrow: "About JST",
   title: "Building with Purpose. Delivering with Trust.",
   paragraphs: [
-    "JST Construction Private Limited is a construction and real estate company based in Uttar Pradesh. We work with homeowners, businesses and partners to plan and build structures that are safe, durable and made to last.",
+    "JST Construction Private Limited is a construction and real estate company based in Pilkhuwa, District Hapur, Uttar Pradesh. We have delivered government buildings, jail barracks, Kisan Kalyan Kendras, staff residences and road works in Hapur, Mathura, Bulandshahr and Gautam Buddh Nagar, and we work with government departments, homeowners, businesses and partners to plan and build structures that are safe, durable and made to last.",
     "Every project is approached with the same discipline: quality workmanship on site, modern construction practices, a safety-first culture and a firm commitment to timely execution. We keep our clients informed at every stage, because transparency and professionalism are the foundation of lasting relationships.",
   ],
   highlights: [
