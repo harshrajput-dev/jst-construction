@@ -90,9 +90,3 @@ export const principles: Principle[] = [
     icon: "smile",
   },
 ];
-
-/** Options shown in the enquiry form's "Project Type" dropdown. */
-export const projectTypes: string[] = [
-  ...services.map((s) => s.title),
-  "Other",
-];

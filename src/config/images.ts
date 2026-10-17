@@ -23,7 +23,7 @@ export const imagePaths = {
 export const imageAlt = {
   logo: "JST Construction Pvt. Ltd. logo — We Build Your Dreams",
   hero: "Two-storey institutional building with orange-trimmed entrance built by JST Construction",
-  about: "JST Construction team at a completed project gate",
+  about: "Fitted-out industrial workshop with blue epoxy walkway and work benches built by JST Construction",
   director: "Krishan Tomer, Director, JST Construction Private Limited, at his office",
 } as const;
 

@@ -84,6 +84,16 @@ export const projects: Project[] = [
     cost: "₹121 Lakh",
   },
   {
+    id: "project-11",
+    isPlaceholder: false,
+    name: "Mathura Road Development Work",
+    location: "Mathura, Uttar Pradesh",
+    category: "Infrastructure",
+    description: "Bituminous road development with mechanised paving and compaction.",
+    image: "/images/projects/project-11.jpg",
+    imageAlt: "Road development work in Mathura with a paver laying asphalt and a roller compacting the new surface",
+  },
+  {
     id: "project-01",
     isPlaceholder: false,
     name: "Courtyard Residential Apartments",

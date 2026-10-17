@@ -13,7 +13,7 @@ export const siteConfig = {
     "construction company Uttar Pradesh",
     "builders Pilkhuwa",
     "construction company Hapur",
-    "real estate builders Sikheda",
+    "real estate builders Sikhera",
     "residential construction",
     "commercial construction",
     "infrastructure development",

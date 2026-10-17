@@ -1,9 +1,7 @@
-import { company, formatAddress } from "@/data/company";
+import { company, formatAddress, whatsappLink } from "@/data/company";
 import { contactContent } from "@/data/content";
-import { projectTypes } from "@/data/services";
 import { Container } from "@/components/ui/Container";
 import { Icon } from "@/components/ui/Icon";
-import { ContactForm } from "./ContactForm";
 
 export function Contact() {
   const { phone, phoneLink, email, whatsapp } = company.contact;
@@ -69,32 +67,30 @@ export function Contact() {
                 </li>
               ) : null}
             </ul>
+          </div>
 
-            {whatsapp ? (
+          {/* WhatsApp */}
+          {whatsapp ? (
+            <div className="flex flex-col items-center justify-center bg-white p-8 text-center sm:p-10 lg:col-span-7 lg:p-12">
+              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366]">
+                <Icon name="whatsapp" className="h-10 w-10" strokeWidth={1.5} />
+              </span>
+              <h3 className="mt-6 font-display text-xl font-bold text-ink-900">Chat with us on WhatsApp</h3>
+              <p className="mt-2 max-w-sm text-[0.9375rem] leading-relaxed text-ink-500">
+                Send us a message about your project and our team will reply directly on WhatsApp.
+              </p>
               <a
-                href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(`Hello ${company.shortName}, I would like to discuss a construction project.`)}`}
+                href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-10 inline-flex min-h-[48px] items-center gap-3 border border-white/25 px-5 text-sm font-semibold text-white transition-colors hover:border-[#25D366] hover:text-[#25D366]"
+                className="mt-8 inline-flex min-h-[52px] items-center gap-3 bg-[#25D366] px-7 text-sm font-semibold text-white transition-colors hover:bg-[#1ebe5b]"
               >
                 <Icon name="whatsapp" className="h-5 w-5" />
                 Chat on WhatsApp
               </a>
-            ) : null}
-          </div>
-
-          {/* Form */}
-          <div className="bg-white p-8 sm:p-10 lg:col-span-7 lg:p-12">
-            <h3 className="font-display text-xl font-bold text-ink-900">Send us an enquiry</h3>
-            <p className="mt-2 text-sm text-ink-500">
-              Fields marked <span className="text-gold-700">*</span> are required.
-            </p>
-            <ContactForm
-              projectTypes={projectTypes}
-              email={email}
-              endpoint={company.enquiryEndpoint}
-            />
-          </div>
+              {phone ? <p className="mt-4 text-sm text-ink-500">{phone}</p> : null}
+            </div>
+          ) : null}
         </div>
 
         {mapEmbedUrl ? (

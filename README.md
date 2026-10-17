@@ -45,7 +45,7 @@ jst-construction/
 │   │   ├── layout/              ← Navbar (sticky + mobile menu), Footer
 │   │   ├── sections/            ← Hero, About, Services, WhyChooseUs, Projects,
 │   │   │                          DirectorsMessage, ViksitBharat, Testimonials,
-│   │   │                          TrustSection, Contact, ContactForm
+│   │   │                          TrustSection, Contact
 │   │   ├── ui/                  ← Button, Container, Icon set, Logo,
 │   │   │                          SectionHeading, RevealObserver
 │   │   └── illustrations/       ← original blueprint drawings (photo fallbacks)
@@ -82,7 +82,6 @@ jst-construction/
 | Embedded map                       | `google.mapEmbedUrl`                  |
 | Social media icons → live links    | `social[].url`                        |
 | CIN / GSTIN in footer              | `legal`                               |
-| Where the enquiry form is sent     | `enquiryEndpoint` (e.g. a Formspree URL). If empty, the form opens the visitor's email app addressed to `contact.email`. |
 | Services                           | `src/data/services.ts`                |
 | Projects                           | `src/data/projects.ts` + photos in `public/images/projects/` |
 | Testimonials                       | `src/data/testimonials.ts`            |

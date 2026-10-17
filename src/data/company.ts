@@ -28,7 +28,7 @@ export const company = {
   category: "Real Estate Builders & Construction Company",
 
   description:
-    "JST Construction Private Limited is a construction and real estate company based in Sikheda, Uttar Pradesh, focused on quality workmanship, safety, modern technology, timely execution, and customer satisfaction.",
+    "JST Construction Private Limited is a construction and real estate company based in Sikhera, Pilkhuwa (Hapur), Uttar Pradesh, focused on quality workmanship, safety, modern technology, timely execution, and customer satisfaction.",
 
   shortDescription:
     "A construction and real estate company from Uttar Pradesh, committed to quality workmanship, safety, modern technology and timely execution.",
@@ -47,11 +47,11 @@ export const company = {
   },
 
   address: {
-    line1: "Opp. Sikhera Police Station",
+    line1: "Opp. Sikhera Police Station, Dholana Pilkhuwa Road",
     locality: "Pilkhuwa",
     district: "Distt. Hapur",
     /** Locality name as it appears on the Google Business listing. */
-    area: "Sikheda",
+    area: "Sikhera",
     state: "Uttar Pradesh",
     country: "India",
     postalCode: "", // [PIN CODE] — add when available
@@ -90,13 +90,6 @@ export const company = {
    */
   social,
 
-  /**
-   * Optional form endpoint (e.g. Formspree, Getform or your own API route).
-   * When empty, the enquiry form opens the visitor's e-mail app with the
-   * enquiry pre-filled and addressed to `contact.email`.
-   */
-  enquiryEndpoint: "",
-
   foundingYear: "", // [YEAR] — leave empty unless verified
 };
 
@@ -106,4 +99,10 @@ export function formatAddress(): string {
   return [a.line1, a.locality, a.district, a.state, a.postalCode, a.country]
     .filter(Boolean)
     .join(", ");
+}
+
+/** wa.me chat link to the company number, with a greeting pre-filled. */
+export function whatsappLink(): string {
+  const text = `Hello ${company.shortName}, I would like to discuss a construction project.`;
+  return `https://wa.me/${company.contact.whatsapp}?text=${encodeURIComponent(text)}`;
 }

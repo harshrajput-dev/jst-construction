@@ -86,5 +86,5 @@ export const contactContent = {
   eyebrow: "Contact",
   title: "Let's Build Something Strong Together",
   description:
-    "Share a few details about your project and our team will get back to you to discuss requirements, timelines and next steps.",
+    "Message us on WhatsApp or give us a call — our team will discuss your requirements, timelines and next steps.",
 };

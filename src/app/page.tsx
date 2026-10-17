@@ -16,6 +16,7 @@ import { TrustSection } from "@/components/sections/TrustSection";
 import { ViksitBharat } from "@/components/sections/ViksitBharat";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { RevealObserver } from "@/components/ui/RevealObserver";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 /** Structured data for search engines — only verified facts are included. */
 function buildJsonLd() {
@@ -72,6 +73,7 @@ export default function HomePage() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
       <RevealObserver />
       <script
         type="application/ld+json"
