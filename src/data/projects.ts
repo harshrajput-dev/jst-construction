@@ -25,6 +25,17 @@ export const projects: Project[] = [
     cost: "₹1,076 Lakh",
   },
   {
+    id: "project-12",
+    isPlaceholder: false,
+    name: "CIP South Asia Regional Centre — Chain Link Fencing",
+    location: "Agra, Uttar Pradesh",
+    category: "Infrastructure",
+    description: "Perimeter chain link fencing for the International Potato Center (CIP) South Asia Regional Centre, set on concrete-founded steel posts.",
+    image: "/images/projects/project-12.jpg",
+    imageAlt: "Galvanised chain link fence panels being installed along the CIP South Asia Regional Centre boundary in Agra",
+    cost: "₹650 Lakh",
+  },
+  {
     id: "project-10",
     isPlaceholder: false,
     name: "ITI Vrindavan — Main Building",
